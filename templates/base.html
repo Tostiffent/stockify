@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{url_for('static', filename="css/global.css")}}" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="chat_area" class="chat_area">hi</div>
+      <div class="text_area">
+        <form id="chat_input_form" class="chat_input_form">
+          <input
+            id="chat_input"
+            class="chat_input"
+            type="text"
+            name="content"
+            id="content"
+            content-type="application/json"
+          />
+          <button id="chat_input_submit" type="submit" style="background-color: white" class="chat_input_submit">
+            ->
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="static/script.js"></script>
+</html>
