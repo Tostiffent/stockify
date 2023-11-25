@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Predictor</title>
-    <link rel="stylesheet" href="{{url_for('static', filename="css/home.css")}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}" />
   </head>
   <body>
     <div class="login-container">
       <form id="login-form" class="login-form">
-        <h2 style="margin-top: 20px">AI STOCK PREDICTOR</h2>
+        <h2 style="margin-top: 20px">STOCK PRICE PREDICTOR</h2>
         <div style="margin-top: 20px" class="input-group">
-          <label for="tinker">Ticker Symbol: </label>
-          <input type="text" id="tinker" name="tinker" required />
+          <label for="ticker">Ticker Symbol: </label>
+          <input type="text" id="ticker" name="ticker" required />
         </div>
         <div style="margin-top: 20px" class="input-group">
           <label for="days">Number of days: </label>
@@ -22,5 +22,5 @@
       </form>
     </div>
   </body>
-  <script src="static/script.js"></script>
+  <script src="static/js/input_form.js"></script>
 </html>
