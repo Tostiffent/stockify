@@ -4,10 +4,10 @@ from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
-
-@app.route("/", methods=["POST", "GET"])
-def index():
-  return render_template("base.html")
+#serve website (base.html as base and index.html as template)
+@app.route("/",methods=["POST", "GET"] )
+def index(): 
+    return render_template("landing.html")
 
 
 @app.route("/predict", methods=["POST", "GET"])

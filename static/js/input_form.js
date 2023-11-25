@@ -1,6 +1,6 @@
 var form = document.getElementById("login-form");
 function handleForm(event) {
-event.preventDefault();
+  event.preventDefault();
   var formData = new FormData(form);
   // output as an object
   var data = Object.fromEntries(formData);
@@ -9,3 +9,9 @@ event.preventDefault();
   location.replace(`/result?ticker=${data?.ticker}&days=${data?.days}`);
 }
 form.addEventListener("submit", handleForm);
+
+var btn = document.getElementById("predictBtn");
+function handleClick() {
+  event.preventDefault();
+  location.replace(`/predict`);
+}

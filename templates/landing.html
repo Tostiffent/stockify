@@ -7,11 +7,46 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{{url_for('static', filename="css/global.css")}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename="css/landing.css")}}" />
   </head>
   <body>
     <div class="container">
-      <div id="chat_area" class="chat_area">hi</div>
+      <section class="landingScreen">
+        <nav class="navbar">
+          <div class="logoContainer">
+            <h3 class="navText">Stockify</h3>
+            <div class="logoHolder">
+              <img
+                alt="navimg"
+                class="logo"
+                src="https://media.discordapp.net/attachments/1154724255859216435/1177787761978265672/money-icon-vector-21582434-removebg-preview.png?ex=6573c754&is=65615254&hm=3bffbdbce0568956925edd3cde6ea423308f1835773aef5572f3251c263b061f&=&format=webp&width=490&height=482"
+              />
+            </div>
+          </div>
+        </nav>
+        <div class="main">
+          <div class="textArea">
+            <div class="filler">
+              <div class="filler1">$</div>
+              <div class="filler2">$</div>
+            </div>
+            <h1 class="mainTextG">The best stock predictor</h1>
+            <h1 class="mainText">on the Planet! :D</h1>
+            <span class="description">
+              Stockify is the best AI stock predictor present on the Planet having the most accurate predictions out of
+              all.
+            </span>
+            <div class="mainButtons">
+              <button id="predictBtn" onClick="handleClick()" class="signupBtn">Predict Now</button>
+              <button class="outlineBtn">Know More</button>
+            </div>
+            <div class="fillerc">
+              <div class="filler3">$</div>
+              <div class="filler4">$</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
   <script src="static/script.js"></script>
