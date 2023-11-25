@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, redirect
 
 app = Flask(__name__)
 
@@ -7,8 +7,16 @@ app = Flask(__name__)
 def index(): 
     return render_template("base.html")
 
+@app.route("/home",methods=["POST", "GET"] )
+def home(): 
+    return render_template("home.html")
+
 @app.route("/result",methods=["POST", "GET"] )
 def result(): 
+    tinker = request.args.get("tinker")
+    days = request.args.get("days")
+    if not tinker or not days:
+        return redirect("/home")
     return render_template("result.html")
 
 
