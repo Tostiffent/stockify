@@ -62,7 +62,7 @@ def graph_predicted_prices(ticker_sym, no_of_days) -> str | None:
     return None
 
   try:
-    df_ml: pd.DataFrame = yf.download(tickers=ticker_sym, period='1mo', interval='1h')
+    df_ml: pd.DataFrame = yf.download(tickers=ticker_sym, period='3mo', interval='1h')
     print(df_ml.shape)
 
   except Exception as e:
