@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stock Predictor</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}" />
-  </head>
-  <body>
-    <div class="login-container">
-      <form id="login-form" class="login-form">
-        <h2 style="margin-top: 20px">STOCK PRICE PREDICTOR</h2>
-        <div style="margin-top: 20px" class="input-group">
-          <label for="ticker">Ticker Symbol: </label>
-          <input type="text" id="ticker" name="ticker" required />
-        </div>
-        <div style="margin-top: 20px" class="input-group">
-          <label for="days">Number of days: </label>
-          <input type="text" id="days" name="days" required />
-        </div>
-        <button style="margin-top: 20px">Predict</button>
-      </form>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Predictor</title>
+
+  <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/predict.css')}}" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/global.css')}}" />
+</head>
+
+<body>
+  <div class="login-container">
+    <div id="spinner"
+      class="bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+        <!-- <span class="sr-only">Loading...</span> -->
+      </div>
     </div>
-  </body>
-  <script src="static/js/input_form.js"></script>
+    <form id="login-form" class="login-form">
+      <h2 style="margin-top: 20px">STOCK PRICE PREDICTOR</h2>
+      <div style="margin-top: 20px" class="input-group">
+        <label for="ticker">Ticker Symbol: </label>
+        <input type="text" id="ticker" name="ticker" required />
+      </div>
+      <div style="margin-top: 20px" class="input-group">
+        <label for="days">Number of days: </label>
+        <input type="text" id="days" name="days" required />
+      </div>
+      <button style="margin-top: 20px">Predict</button>
+    </form>
+  </div>
+</body>
+<script src="static/js/input_form.js"></script>
+
 </html>

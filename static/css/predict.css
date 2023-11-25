@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -61,4 +60,17 @@ button {
 button:hover {
   background-color: #f5ff6d;
   color: black;
+}
+
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
 }
