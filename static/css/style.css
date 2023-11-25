@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-  --primary: #f5ff6d;
+  --primary: #ceca88;
   --secondary: #191c24;
   --light: #6c7293;
   --dark: #000000;
@@ -77,7 +77,7 @@
   justify-content: center;
   font-weight: normal;
   border-radius: 50px;
-  background-color: #f5ff6d;
+  background-color: #ceca88;
 }
 
 /*** Layout ***/

@@ -9,22 +9,26 @@ body {
 }
 
 .login-container {
-  background-color: #191c24;
+  background-color: #14151a;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 50%;
-  height: 60%;
+  width: 30%;
+  max-width: 30%;
+  height: 75%;
   justify-content: center;
   display: flex;
   align-items: center;
-  color: #f5ff6d;
+  color: white;
+  -webkit-box-shadow: 0px 0px 10px 10px rgba(242, 242, 142, 1);
+  -moz-box-shadow: 0px 0px 10px 10px rgba(242, 242, 142, 1);
+  box-shadow: 0px 0px 10px 10px rgba(242, 242, 142, 1);
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  color: #f5ff6d;
+  color: white;
 }
 
 h2 {
@@ -44,6 +48,7 @@ input[type="password"] {
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 button {
@@ -55,11 +60,7 @@ button {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   height: 50px;
-}
-
-button:hover {
-  background-color: #f5ff6d;
-  color: black;
+  border-radius: 10px;
 }
 
 #spinner {

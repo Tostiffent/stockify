@@ -197,7 +197,7 @@ sup {
   top: -0.5em;
 }
 a {
-  color: #f5ff6d;
+  color: #ceca88;
   text-decoration: none;
 }
 a:hover {
@@ -2538,7 +2538,7 @@ fieldset:disabled .btn {
 .btn-primary {
   color: #fff;
   background-color: #eb1616;
-  border-color: #eb1616;
+  border-color: #ceca88;
 }
 .btn-primary:hover {
   color: #fff;
@@ -6770,7 +6770,7 @@ fieldset:disabled .btn {
   word-break: break-word !important;
 }
 .text-primary {
-  color: #f5ff6d !important;
+  color: #ceca88 !important;
 }
 .text-secondary {
   color: #191c24 !important;
