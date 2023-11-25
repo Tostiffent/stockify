@@ -62,13 +62,11 @@ def graph_predicted_prices(ticker_sym, no_of_days) -> str | None:
     return None
 
   try:
-    df_ml: pd.DataFrame = yf.download(tickers=ticker_sym, period='3mo', interval='1h')
+    df_ml: pd.DataFrame = yf.download(tickers=ticker_sym, period='1mo', interval='1h')
     print(df_ml.shape)
 
   except Exception as e:
     print(e, file=stderr)
-    ticker_sym = 'AAPL'
-    df_ml = yf.download(tickers=ticker_sym, period='3mo', interval='1m')
 
   # Fetching ticker values from Yahoo Finance API
   df_ml = df_ml[['Adj Close']]
@@ -85,10 +83,11 @@ def graph_predicted_prices(ticker_sym, no_of_days) -> str | None:
   # Applying Linear Regression
   clf = LinearRegression()
   clf.fit(X_train, y_train)
-  # Prediction Score
-  confidence = clf.score(X_test, y_test)
 
-  print(f"Confidence : {confidence}")
+  # Prediction Score R ^ 2
+  confidence = clf.score(X_test, y_test)
+  print(f"Confidence : {confidence * 100} %")
+
   # Predicting for 'n' days stock data
   forecast_prediction = clf.predict(X_forecast)
   forecast = forecast_prediction.tolist()
