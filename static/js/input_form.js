@@ -10,7 +10,6 @@ function handleForm(event) {
 }
 form.addEventListener("submit", handleForm);
 
-var btn = document.getElementById("predictBtn");
 function handleClick() {
   event.preventDefault();
   location.replace(`/predict`);
