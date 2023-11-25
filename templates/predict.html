@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stock Predictor</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+    rel="stylesheet" />  
   <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" />
 
   <link rel="stylesheet" href="{{url_for('static', filename='css/predict.css')}}" />
@@ -20,20 +25,21 @@
         <!-- <span class="sr-only">Loading...</span> -->
       </div>
     </div>
-    <form id="login-form" class="login-form">
-      <h2 style="margin-top: 20px">STOCK PRICE PREDICTOR</h2>
-      <div style="margin-top: 20px" class="input-group">
-        <label for="ticker">Ticker Symbol: </label>
-        <input type="text" id="ticker" name="ticker" required />
+    <form id="login-form" class="login-form w-3/5">
+      <h2 class="mt-8 text-3xl">Make a prediction:</h2>
+      <div class="input-group mt-8 flex flex-col justify-content-center">
+        <label for="ticker" class="text-xl">Ticker Symbol: </label>
+        <input class="rounded-lg mt-2" type="text" id="ticker" name="ticker" required />
       </div>
-      <div style="margin-top: 20px" class="input-group">
-        <label for="days">Number of days: </label>
-        <input type="text" id="days" name="days" required />
+      <div class="input-group mt-8 flex flex-col justify-content-center">
+        <label for="days" class="text-xl">Number of days: </label>
+        <input class="mt-2" type="text" id="days" name="days" required />
       </div>
-      <button style="margin-top: 20px">Predict</button>
+      <button class="mt-8 text-xl bg-[#4f4f4f]">Predict</button>
     </form>
   </div>
 </body>
+<script src="https://cdn.tailwindcss.com"></script>
 <script src="static/js/input_form.js"></script>
 
 </html>

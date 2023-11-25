@@ -31,9 +31,13 @@ def result():
   sector = stock_data["sector"]
   industry = stock_data["industry"]
 
-  live_price_graph = graph_current_prices(ticker_sym)
+  live_price_graph = graph_current_prices(ticker_sym, company_name)
   predicted_price_graph = graph_predicted_prices(ticker_sym, days)
 
+  if not (live_price_graph and predicted_price_graph):
+    # error
+    return "Bad request", 400
+  
   return render_template("result.html", tickerSym=ticker_sym, companyName=company_name, 
                          noDays=days, marketCap=market_cap, country=country,
                          volume=volume, sector=sector, industry=industry,
