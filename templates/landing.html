@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename="css/landing.css")}}" />
   </head>
   <body>
-    <div class="container">
+    <div class="outer_container">
       <section class="landingScreen">
         <nav class="navbar">
           <div class="logoContainer">
@@ -30,14 +30,14 @@
               <div class="filler1">$</div>
               <div class="filler2">$</div>
             </div>
-            <h1 class="mainTextG">The best stock predictor</h1>
-            <h1 class="mainText">on the Planet! :D</h1>
+            <h1 class="mainTextG"><b>The best stock predictor</b></h1>
+            <h1 class="mainText"><b>on the planet! :D</b></h1>
             <span class="description">
-              Stockify is the best AI stock predictor present on the Planet having the most accurate predictions out of
+              Stockify is the best AI stock predictor present on the Planet having the most accurate predictions of
               all.
             </span>
             <div class="mainButtons">
-              <button id="predictBtn" onClick="handleClick()" class="signupBtn">Predict Now</button>
+              <button id="predictBtn" onClick="handleClick()" class="signupBtn"><a href="/predict">Predict Now</a></button>
               <button class="outlineBtn">Know More</button>
             </div>
             <div class="fillerc">

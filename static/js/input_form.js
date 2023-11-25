@@ -9,8 +9,3 @@ function handleForm(event) {
   location.replace(`/result?ticker=${data?.ticker}&days=${data?.days}`);
 }
 form.addEventListener("submit", handleForm);
-
-function handleClick() {
-  event.preventDefault();
-  location.replace(`/predict`);
-}
