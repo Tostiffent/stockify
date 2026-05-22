@@ -69,9 +69,12 @@ def graph_predicted_prices(ticker_sym, no_of_days) -> str | None:
     print(e, file=stderr)
 
   # Fetching ticker values from Yahoo Finance API
-  df_ml = df_ml[['Adj Close']]
+  # 1. Change 'Adj Close' to 'Close'. Add .copy() to prevent SettingWithCopyWarning
+  df_ml = df_ml[['Close']].copy() 
   forecast_out = int(no_of_days)
-  df_ml['Prediction'] = df_ml[['Adj Close']].shift(-forecast_out)
+  
+  # 2. Change 'Adj Close' to 'Close' here as well
+  df_ml['Prediction'] = df_ml[['Close']].shift(-forecast_out)
   # Splitting data for Test and Train
   X = np.array(df_ml.drop(['Prediction'], axis=1))
   X = preprocessing.scale(X)
