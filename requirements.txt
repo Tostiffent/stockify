@@ -1,5 +1,5 @@
 flask
-yfinance==0.2.61
+requests
 matplotlib
 numpy
 pandas
