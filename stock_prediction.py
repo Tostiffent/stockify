@@ -1,4 +1,5 @@
 import json
+import time
 from sys import stderr
 import pandas as pd
 import yfinance as yf
@@ -16,8 +17,14 @@ with open("valid_tickers.json", "r") as f:
 
 
 def get_stock_data(ticker_sym):
-  data = yf.Ticker(ticker_sym)
-  return data.info
+  for attempt in range(3):
+    try:
+      data = yf.Ticker(ticker_sym)
+      return data.info
+    except Exception as e:
+      if attempt == 2:
+        raise
+      time.sleep(2 ** attempt)
 
 
 def is_valid_ticker(ticker_sym: str):
