@@ -15,7 +15,8 @@
   <link href="{{url_for('static', filename='css/global.css')}}" rel="stylesheet" />
   <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" />
   <style>
-    .stat-card { background: #1e1f28; border-radius: 10px; padding: 16px 20px; }
+    body, .content { background: #000 !important; }
+    .stat-card { background: #111; border-radius: 10px; padding: 16px 20px; }
     .stat-card .label { font-size: 0.75rem; color: #8a8fa8; text-transform: uppercase; letter-spacing: .05em; }
     .stat-card .value { font-size: 1.35rem; font-weight: 700; color: #fff; margin-top: 4px; }
     .stat-card .sub { font-size: 0.8rem; margin-top: 2px; }
@@ -39,7 +40,7 @@
 
     <!-- Sidebar -->
     <div class="sidebar pe-4 pb-3">
-      <nav class="navbar bg-secondary navbar-dark">
+      <nav class="navbar bg-dark navbar-dark">
         <a href="/" class="navbar-brand mx-4 mb-3">
           <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Stockify</h3>
         </a>
@@ -61,7 +62,7 @@
 
     <!-- Content -->
     <div class="content">
-      <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+      <nav class="navbar navbar-expand bg-dark navbar-dark sticky-top px-4 py-0">
         <a href="/" class="navbar-brand d-flex d-lg-none me-4">
           <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
         </a>
@@ -72,7 +73,7 @@
               <img class="rounded-circle me-lg-2" src="{{url_for('static', filename='image/user.png')}}" alt="" style="width: 40px; height: 40px" />
               <span class="d-none d-lg-inline-flex">Guest</span>
             </a>
-            <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+            <div class="dropdown-menu dropdown-menu-end bg-dark border-0 rounded-0 rounded-bottom m-0">
               <a href="/predict" class="dropdown-item">Predict</a>
             </div>
           </div>
@@ -81,7 +82,7 @@
 
       <!-- Price hero -->
       <div class="container-fluid pt-4 px-4">
-        <div class="bg-secondary rounded p-4 mb-2">
+        <div class="bg-dark rounded p-4 mb-2">
           <div class="d-flex flex-wrap align-items-center gap-3">
             <div>
               <h4 class="mb-0 text-white">{{ companyName }}</h4>
@@ -161,7 +162,7 @@
       <div class="container-fluid px-4">
         <div class="row g-3 mb-2">
           <div class="col-12">
-            <div class="bg-secondary rounded p-4">
+            <div class="bg-dark rounded p-4">
               <div class="d-flex align-items-center justify-content-between mb-3">
                 <h6 class="mb-0">Company Details</h6>
                 <a href="https://finance.yahoo.com/quote/{{ tickerSym }}" target="_blank" class="small">View on Yahoo Finance</a>
@@ -186,7 +187,7 @@
       <div class="container-fluid px-4">
         <div class="row g-3 mb-2">
           <div class="col-12">
-            <div class="bg-secondary rounded p-4">
+            <div class="bg-dark rounded p-4">
               <h6 class="mb-3">3-Month Price History</h6>
               <div id="historical_chart"></div>
             </div>
@@ -199,7 +200,7 @@
       <div class="container-fluid px-4">
         <div class="row g-3 mb-2">
           <div class="col-sm-12 col-xl-6">
-            <div class="bg-secondary rounded p-4">
+            <div class="bg-dark rounded p-4">
               <div class="d-flex align-items-center justify-content-between mb-3">
                 <h6 class="mb-0">Today's Price — {{ tickerSym | upper }}</h6>
                 <a href="https://finance.yahoo.com/quote/{{ tickerSym }}/chart" target="_blank" class="small">Show More</a>
@@ -208,7 +209,7 @@
             </div>
           </div>
           <div class="col-sm-12 col-xl-6">
-            <div class="bg-secondary rounded p-4">
+            <div class="bg-dark rounded p-4">
               <div class="d-flex align-items-center justify-content-between mb-3">
                 <h6 class="mb-0">Predicted Price — Next {{ noDays }} Days</h6>
               </div>
@@ -220,7 +221,7 @@
 
       <!-- Footer -->
       <div class="container-fluid pt-2 px-4">
-        <div class="bg-secondary rounded-top p-4">
+        <div class="bg-dark rounded-top p-4">
           <div class="row">
             <div class="col-12 col-sm-6 text-center text-sm-start">
               &copy; <a href="#">Windows 9 Developers</a>, All Right Reserved.

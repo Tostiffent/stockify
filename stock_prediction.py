@@ -122,11 +122,11 @@ def graph_current_prices(ticker_sym, company_name):
 
   fig = go.Figure()
   fig.add_trace(go.Candlestick(
-      x=df.index,
-      open=df['Open'],
-      high=df['High'],
-      low=df['Low'],
-      close=df['Close'],
+      x=df.index.strftime('%Y-%m-%d %H:%M:%S').tolist(),
+      open=df['Open'].values.tolist(),
+      high=df['High'].values.tolist(),
+      low=df['Low'].values.tolist(),
+      close=df['Close'].values.tolist(),
       name='market data',
   ))
   fig.update_layout(
