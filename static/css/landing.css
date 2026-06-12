@@ -13,7 +13,7 @@ body {
   width: 100%;
   height: 100%;
   border: 1px solid #000;
-  background: rgb(0, 0, 0);
+  background: rgb(17, 74, 231);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
